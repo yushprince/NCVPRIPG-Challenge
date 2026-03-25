@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoAnn-Indic | NCVPRIPG 2026 Challenge</title>
+  <style>
+    :root {
+      --bg: #f7f8fc;
+      --surface: #ffffff;
+      --ink: #1b1f2a;
+      --muted: #596179;
+      --brand: #2f4f9d;
+      --accent: #cc7a00;
+      --border: #e5e8f0;
+      --good: #1e7f4f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .hero {
+      color: #fff;
+      background: linear-gradient(130deg, #1d2f69 0%, #344f9f 45%, #4d67bb 100%);
+      padding: 3.5rem 1.25rem 2.8rem;
+      border-bottom: 4px solid #f3b45a;
+    }
+
+    .container {
+      width: min(1100px, 94vw);
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 0.75rem 0 0;
+      max-width: 80ch;
+      color: #e8ecff;
+      font-size: 1.02rem;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: #f3b45a;
+      color: #472c05;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+      align-items: start;
+    }
+
+    nav {
+      position: sticky;
+      top: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.85rem;
+    }
+
+    nav h3 { margin: 0.1rem 0 0.5rem; font-size: 0.95rem; }
+    nav a {
+      display: block;
+      text-decoration: none;
+      color: var(--muted);
+      padding: 0.36rem 0.45rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+    }
+    nav a:hover { background: #eef2ff; color: var(--brand); }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin: 0 0 0.45rem;
+      color: #24366f;
+      font-size: 1.35rem;
+    }
+
+    h3 { margin-top: 1.1rem; color: #24366f; }
+
+    .muted { color: var(--muted); }
+    ul, ol { padding-left: 1.15rem; }
+    li { margin: 0.3rem 0; }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.7rem;
+      margin-top: 0.6rem;
+    }
+
+    .date-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      border-radius: 10px;
+      padding: 0.7rem 0.8rem;
+      background: #fbfcff;
+    }
+
+    .date { font-weight: 700; color: var(--good); font-size: 0.9rem; }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.7rem 0.8rem;
+      margin-top: 0.6rem;
+      background: #fcfdff;
+    }
+
+    summary { cursor: pointer; font-weight: 600; color: #263461; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin: 1.2rem 0 2rem;
+      font-size: 0.9rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      background: #edf1ff;
+      border: 1px solid #d8e1ff;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.35rem;
+      color: #274190;
+    }
+
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <span class="badge">NCVPRIPG 2026 Challenge</span>
+      <h1>AutoAnn-Indic: Human-Effort Efficient Automated Annotation for Indic Manuscripts and Ram Charit Manas</h1>
+      <p>
+        A practice-oriented challenge focused on scalable, high-quality automated pre-annotation for Indic manuscript pages,
+        evaluated not only by annotation quality but also by measurable human correction effort.
+      </p>
+    </div>
+  </header>
+
+  <main class="container layout">
+    <nav>
+      <h3>On this page</h3>
+      <a href="#intro">Introduction</a>
+      <a href="#impact">Impact & Significance</a>
+      <a href="#rules">Rules & Evaluation</a>
+      <a href="#novelty">Novelty</a>
+      <a href="#team">Organizing Team</a>
+      <a href="#dates">Important Dates</a>
+      <a href="#awards">Awards</a>
+      <a href="#resources">Resources</a>
+      <a href="#references">References</a>
+    </nav>
+
+    <div>
+      <section id="intro">
+        <h2>1) Introduction</h2>
+        <p>
+          Indic manuscripts (paper and palm-leaf) present extreme variability in scripts, calligraphic styles, ink density,
+          textures, geometry, and degradations (bleed-through, stains, cracks, holes, fading, ornaments, and marginalia).
+          Although digitization has produced large image collections, high-quality annotation for layout, baselines, damage,
+          and reading order remains a bottleneck.
+        </p>
+        <p>
+          AutoAnn-Indic addresses this with an automated annotation generation challenge using a diverse Indic manuscript
+          corpus and a focused Ram Charit Manas subset. Participants will receive a curated page set, small seed labels,
+          and a larger unlabeled pool to encourage weak/self/semi-supervised learning and active learning.
+        </p>
+        <p>
+          Submissions will include layout regions (text, marginalia/notes, illustrations/diagrams, page/frame, damage/holes)
+          and text-line/baseline outputs in standard formats (PAGE-XML and/or COCO schema as announced).
+        </p>
+      </section>
+
+      <section id="impact">
+        <h2>2) Impact & Significance</h2>
+        <h3>Research impact</h3>
+        <ul>
+          <li><strong>Beyond accuracy-only benchmarks:</strong> evaluates quality plus human effort saved.</li>
+          <li><strong>Low-label learning at scale:</strong> supports weak supervision, self-training, and active learning.</li>
+          <li><strong>Robustness under realistic degradations:</strong> targets hard manuscript conditions and domain shifts.</li>
+          <li><strong>Downstream improvements:</strong> benefits OCR/HTR, retrieval, reading order, and translation workflows.</li>
+        </ul>
+        <h3>Societal & ecosystem impact</h3>
+        <ul>
+          <li>Faster and lower-cost digitization workflows for archives and libraries.</li>
+          <li>Improved preservation and discovery of Indic cultural heritage content.</li>
+          <li>Release of reusable formats, scripts, and annotation guidelines for the community.</li>
+        </ul>
+      </section>
+
+      <section id="rules">
+        <h2>3) Major Rules for Participation & Evaluation Criteria</h2>
+        <h3>A) Participation rules</h3>
+        <ol>
+          <li><strong>Data policy:</strong> train only on the officially released AutoAnn-Indic dataset.</li>
+          <li><strong>External pretraining:</strong> allowed with full disclosure of model/weights/source/data.</li>
+          <li><strong>No extra manual labeling:</strong> additional human annotation beyond seed labels is prohibited.</li>
+          <li><strong>Submission format:</strong> official schema + page IDs, using PAGE-XML and/or COCO-style JSON.</li>
+          <li><strong>Submission limits:</strong> test submissions capped to prevent overfitting (e.g., 3–5 per team).</li>
+          <li><strong>Reproducibility:</strong> shortlisted teams must provide method summary and runnable inference.</li>
+          <li><strong>Ethics & fair use:</strong> research-only use, licensing compliance, no harmful content.</li>
+        </ol>
+
+        <h3>B) Evaluation criteria</h3>
+        <p>
+          The leaderboard combines <strong>annotation quality (Q)</strong> and <strong>human effort (E)</strong>.
+        </p>
+        <ul>
+          <li><strong>Track 1 (Layout):</strong> mIoU / mask mAP, with PQ where applicable.</li>
+          <li><strong>Track 2 (Lines/Baselines):</strong> Line IoU / F1 and tolerance-based baseline metrics.</li>
+          <li><strong>Human effort:</strong> median correction time (seconds/page) on a hidden subset under fixed protocol.</li>
+        </ul>
+        <p>
+          Final ranking may use <strong>Pareto ranking</strong> or a combined score like <code>S = Q × exp(-λE)</code> (or an equivalent normalized weighted combination),
+          with tie-breakers on hard-subset performance, lower effort, and optional runtime.
+        </p>
+      </section>
+
+      <section id="novelty">
+        <h2>4) Novelty of the Challenge</h2>
+        <ul>
+          <li><strong>Auto-annotation first:</strong> practical generation of pre-annotations for scalable label creation.</li>
+          <li><strong>Human-in-the-loop benchmark:</strong> explicit quality–cost objective with correction-time measurement.</li>
+          <li><strong>Realistic low-label setup:</strong> seed labels + unlabeled pool across Indic + Ram Charit Manas domains.</li>
+        </ul>
+        <p class="muted">
+          This design rewards models that are both accurate and efficient for real annotation workflows.
+        </p>
+      </section>
+
+      <section id="team">
+        <h2>5) Organizing Team</h2>
+        <ol>
+          <li><strong>Challenge Chair:</strong> Dr. Indra Deep Mastan (IIT (BHU) Varanasi) — indra.cse@iitbhu.ac.in</li>
+          <li><strong>Co-Organizer:</strong> Dr. Anukriti Bansal (LNMIIT Jaipur) — anukriti.bansal@lnmiit.ac.in</li>
+          <li><strong>Co-Organizer:</strong> Dr. Aprajita Khan (IIT (BHU) Varanasi) — aparajita.cse@iitbhu.ac.in</li>
+          <li><strong>Annotation/Tools Lead:</strong> Satyendra Yadav (IIT (BHU) Varanasi) — satyendrayadav.rs.cse25@itbhu.ac.in</li>
+          <li><strong>Student Coordinator:</strong> To be confirmed</li>
+        </ol>
+      </section>
+
+      <section id="dates">
+        <h2>6) Important Dates (NCVPRIPG 2026)</h2>
+        <div class="dates">
+          <div class="date-card"><div class="date">7 Jan 2026</div>Challenge Proposal Submission Starts</div>
+          <div class="date-card"><div class="date">15 Feb 2026</div>Challenge Proposal Submission Deadline</div>
+          <div class="date-card"><div class="date">1 Mar 2026 (tentative)</div>Challenge Website + Baseline Release</div>
+          <div class="date-card"><div class="date">5 Mar 2026 (tentative)</div>Dataset Release (seed labels + unlabeled pool)</div>
+          <div class="date-card"><div class="date">10 Mar–15 Jun 2026 (tentative)</div>Validation Phase</div>
+          <div class="date-card"><div class="date">25 Jun 2026 (tentative)</div>Test Release (no GT)</div>
+          <div class="date-card"><div class="date">10 Jul 2026 (tentative)</div>Final Submission Deadline</div>
+          <div class="date-card"><div class="date">22–24 Jul 2026</div>Winners Announcement during NCVPRIPG 2026</div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>Awards Proposed</h2>
+        <span class="pill">Best Overall (Quality + Human-Effort)</span>
+        <span class="pill">Best Human-Efficiency</span>
+        <span class="pill">Best Robustness (Hard Subset)</span>
+        <p class="muted">Awards: certificates + recognition; sponsored prizes if available.</p>
+      </section>
+
+      <section id="resources">
+        <h2>Resources for Participants</h2>
+        <p>Selected links from the proposal:</p>
+        <ul>
+          <li><a href="https://openn.library.upenn.edu/html/indic_contents.html" target="_blank" rel="noopener">OPenn Indic Manuscripts</a></li>
+          <li><a href="https://github.com/PRImA-Research-Lab/PAGE-XML" target="_blank" rel="noopener">PAGE-XML Schemas (PRImA)</a></li>
+          <li><a href="https://ocr-d.de/en/gt-guidelines/trans/trPage.html" target="_blank" rel="noopener">OCR-D PAGE-XML Guidelines</a></li>
+          <li><a href="https://www.primaresearch.org/tools/aletheia" target="_blank" rel="noopener">Aletheia Ground-Truthing Tool</a></li>
+          <li><a href="https://github.com/mittagessen/kraken" target="_blank" rel="noopener">Kraken OCR/HTR</a></li>
+          <li><a href="https://www.ramcharitmanas.iitk.ac.in/" target="_blank" rel="noopener">IIT Kanpur Ramcharitmanas Portal</a></li>
+          <li><a href="https://archive.org/details/GitaPress790" target="_blank" rel="noopener">Gita Press 790 Scan</a></li>
+        </ul>
+      </section>
+
+      <section id="references">
+        <h2>References</h2>
+        <p class="muted">
+          The complete reference list in your challenge description (items [1]–[38]) can be added as a downloadable PDF
+          or expanded directly in this section. To keep this first version clean and readable, we included representative links above.
+        </p>
+        <details>
+          <summary>Show recommendation for next update</summary>
+          <ul>
+            <li>Add the full [1]–[38] references as numbered citations.</li>
+            <li>Add downloadable files: challenge PDF, rules PDF, and starter kit.</li>
+            <li>Add registration/submission buttons once platform is finalized.</li>
+          </ul>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    AutoAnn-Indic • NCVPRIPG 2026 • Last updated: March 25, 2026 (UTC)
+  </footer>
+</body>
+</html>
