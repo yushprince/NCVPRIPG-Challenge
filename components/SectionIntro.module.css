@@ -1,0 +1,50 @@
+.section {
+  padding: 4.5rem 0;
+  color: #153456;
+}
+
+.alt {
+  background: rgba(255, 255, 255, 0.35);
+  border-block: 1px solid rgba(47, 128, 237, 0.08);
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: 0 auto;
+}
+
+.sectionLead {
+  max-width: 840px;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  color: #1d4fa8;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.title {
+  margin: 0;
+  color: #0d2340;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.leadCopy {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: #153456;
+  font-size: 1.06rem;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}
