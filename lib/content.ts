@@ -154,9 +154,8 @@ export const tasks: { title: string; items: string[] }[] = [
 export const dates: [string, string][] = [
   ['Challenge Proposal Submission Starts', 'January 7, 2026'],
   ['Challenge Proposal Submission Deadline', 'February 15, 2026'],
-  ['Challenge Website + Baseline Release', 'March 1, 2026 (tentative)'],
-  ['Dataset Release', 'March 5, 2026 (tentative)'],
-  ['Validation Phase', 'March 10, 2026 - June 15, 2026 (tentative)'],
+  ['Dataset Release', 'Released: Check the Resources folder in the challenge document'],
+  ['Validation Phase', 'April 20, 2026 - June 15, 2026 (tentative)'],
   ['Test Release (no GT)', 'June 25, 2026 (tentative)'],
   ['Final Submission Deadline', 'July 10, 2026 (tentative)'],
   ['Winners Announcement', 'During NCVPRIPG 2026, July 22-24, 2026'],
